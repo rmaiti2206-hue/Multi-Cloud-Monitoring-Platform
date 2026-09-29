@@ -1,0 +1,3 @@
+import React from 'react';import {NavLink} from 'react-router-dom';
+const links=[['/dashboard','Dashboard'],['/aws','AWS'],['/azure','Azure'],['/gcp','GCP'],['/resources','Resources'],['/metrics','Metrics'],['/alerts','Alerts'],['/accounts','Accounts'],['/users','Users'],['/reports','Reports'],['/settings','Settings']];
+export default function Sidebar(){return <aside className="sidebar">{links.map(([p,n])=><NavLink key={p} to={p}>{n}</NavLink>)}</aside>}

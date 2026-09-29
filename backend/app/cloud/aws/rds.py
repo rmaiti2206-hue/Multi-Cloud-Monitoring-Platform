@@ -1,0 +1,1 @@
+def list_databases(session,region): return [{'provider':'AWS','id':x['DBInstanceIdentifier'],'type':'RDS','status':x.get('DBInstanceStatus','unknown'),'region':region} for x in session.client('rds',region_name=region).describe_db_instances().get('DBInstances',[])]

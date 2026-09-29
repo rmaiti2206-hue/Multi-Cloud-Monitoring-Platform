@@ -1,0 +1,7 @@
+groups:
+- name: cloud
+  rules:
+  - alert: HighCPU
+    expr: cloud_cpu_utilization > 80
+    for: 5m
+    labels: {severity: warning}

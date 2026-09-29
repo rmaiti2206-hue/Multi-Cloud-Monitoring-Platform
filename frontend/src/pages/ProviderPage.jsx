@@ -1,0 +1,2 @@
+import React,{useEffect,useState} from 'react';import {provider} from '../services/api';
+export default function ProviderPage({provider:name}){const [data,setData]=useState([]);useEffect(()=>{provider(name).then(r=>setData(r.data)).catch(()=>{})},[name]);return <><h1>{name} Monitoring</h1><div className="card"><h3>Resources</h3><table><thead><tr><th>ID</th><th>Type</th><th>Status</th><th>Region</th></tr></thead><tbody>{data.map((x,i)=><tr key={i}><td>{x.id}</td><td>{x.type}</td><td>{x.status}</td><td>{x.region}</td></tr>)}</tbody></table></div></>}

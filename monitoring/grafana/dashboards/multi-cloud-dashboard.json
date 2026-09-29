@@ -1,0 +1,25 @@
+{
+  "title": "Multi-Cloud Overview",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Prometheus Up",
+      "targets": [
+        {
+          "expr": "up"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Demo CPU",
+      "targets": [
+        {
+          "expr": "vector(48)"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}

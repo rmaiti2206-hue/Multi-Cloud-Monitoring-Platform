@@ -1,0 +1,2 @@
+import React from 'react';import {useNavigate} from 'react-router-dom';
+export default function Navbar(){const nav=useNavigate();return <header className="navbar"><div><b>☁ CloudOps Monitor</b><small> Multi-Cloud Monitoring Platform</small></div><button onClick={()=>{localStorage.removeItem('token');nav('/login')}}>Logout</button></header>}

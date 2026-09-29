@@ -1,0 +1,1 @@
+import React from 'react';export default function CloudCard({name,resources,healthy,status}){return <div className="card cloud"><h3>{name}</h3><div className="cloudrow"><b>{resources}</b><span>resources</span></div><p>Healthy: {healthy}</p><strong className={status==='Connected'?'ok':'warn'}>{status}</strong></div>}

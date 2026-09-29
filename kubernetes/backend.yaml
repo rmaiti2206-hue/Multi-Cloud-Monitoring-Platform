@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: multicloud-backend}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: multicloud-backend}}
+  template:
+    metadata: {labels: {app: multicloud-backend}}
+    spec:
+      containers:
+      - name: backend
+        image: multicloud-backend:latest
+        ports: [{containerPort: 8000}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: multicloud-backend}
+spec:
+  selector: {app: multicloud-backend}
+  ports: [{port: 8000,targetPort: 8000}]

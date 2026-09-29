@@ -1,0 +1,12 @@
+import axios from 'axios';
+const api=axios.create({baseURL:'http://localhost:8000/api'});
+api.interceptors.request.use(c=>{const t=localStorage.getItem('token');if(t)c.headers.Authorization=`Bearer ${t}`;return c});
+export const login=d=>api.post('/auth/login',d);
+export const summary=()=>api.get('/dashboard/summary');
+export const resources=()=>api.get('/resources');
+export const alerts=()=>api.get('/alerts');
+export const accounts=()=>api.get('/accounts');
+export const users=()=>api.get('/users');
+export const provider=p=>api.get(`/${p.toLowerCase()}/resources`);
+export const reports=()=>api.get('/reports');
+export default api;

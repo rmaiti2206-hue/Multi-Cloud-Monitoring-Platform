@@ -1,0 +1,1 @@
+import React from 'react';export default function Settings(){return <><h1>Settings</h1><div className="card"><h3>Monitoring Configuration</h3><label>Refresh interval <select><option>15 seconds</option><option>30 seconds</option><option>60 seconds</option></select></label><p className="muted">Use cloud-native identity and least-privilege permissions in production.</p></div></>}

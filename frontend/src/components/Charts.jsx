@@ -1,0 +1,2 @@
+import React from 'react';import {LineChart,Line,XAxis,YAxis,Tooltip,ResponsiveContainer} from 'recharts';
+export default function Charts(){const data=[{t:'10:00',cpu:35},{t:'11:00',cpu:42},{t:'12:00',cpu:38},{t:'13:00',cpu:55},{t:'14:00',cpu:48},{t:'15:00',cpu:62}];return <div className="card chart"><h3>CPU Utilization</h3><ResponsiveContainer width="100%" height={280}><LineChart data={data}><XAxis dataKey="t"/><YAxis/><Tooltip/><Line type="monotone" dataKey="cpu" strokeWidth={3}/></LineChart></ResponsiveContainer></div>}

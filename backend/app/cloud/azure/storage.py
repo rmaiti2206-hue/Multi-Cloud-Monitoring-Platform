@@ -1,0 +1,1 @@
+def list_storage(c): return [{'provider':'Azure','id':x.name,'type':'Storage Account','status':'available','region':x.location} for x in c['resource'].resources.list(filter="resourceType eq 'Microsoft.Storage/storageAccounts'")]

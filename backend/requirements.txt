@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+sqlalchemy
+python-multipart
+boto3
+azure-identity
+azure-mgmt-resource
+azure-mgmt-compute
+google-cloud-resource-manager
+google-cloud-compute
+prometheus-client
+httpx
+psycopg2-binary==2.9.9

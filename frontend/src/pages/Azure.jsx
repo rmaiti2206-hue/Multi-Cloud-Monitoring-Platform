@@ -1,0 +1,1 @@
+import ProviderPage from './ProviderPage';export default function Azure(){return <ProviderPage provider="Azure"/>}

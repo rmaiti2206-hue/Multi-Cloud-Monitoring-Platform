@@ -1,0 +1,1 @@
+import React from 'react';export default function AlertTable({alerts=[]}){return <div className="card"><h3>Recent Alerts</h3><table><thead><tr><th>Severity</th><th>Message</th><th>Time</th></tr></thead><tbody>{alerts.map(a=><tr key={a.id}><td>{a.severity}</td><td>{a.message}</td><td>{a.time}</td></tr>)}</tbody></table></div>}

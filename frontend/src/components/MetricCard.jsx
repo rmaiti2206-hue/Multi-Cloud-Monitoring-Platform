@@ -1,0 +1,1 @@
+import React from 'react';export default function MetricCard({title,value,icon='◉',detail=''}){return <div className="metric card"><span>{icon}</span><div><p>{title}</p><h2>{value}</h2><small>{detail}</small></div></div>}

@@ -1,0 +1,7 @@
+groups:
+- name: cloud
+  rules:
+  - alert: HighMemory
+    expr: cloud_memory_utilization > 85
+    for: 5m
+    labels: {severity: warning}

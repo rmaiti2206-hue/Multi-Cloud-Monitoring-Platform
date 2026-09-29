@@ -1,0 +1,1 @@
+import React,{useEffect,useState} from 'react';import {alerts} from '../services/api';import AlertTable from '../components/AlertTable';export default function Alerts(){const[a,setA]=useState([]);useEffect(()=>{alerts().then(r=>setA(r.data))},[]);return <><h1>Alerts</h1><AlertTable alerts={a}/></>}

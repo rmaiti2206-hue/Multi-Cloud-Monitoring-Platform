@@ -1,0 +1,7 @@
+groups:
+- name: cloud
+  rules:
+  - alert: ResourceDown
+    expr: cloud_resource_up == 0
+    for: 2m
+    labels: {severity: critical}
